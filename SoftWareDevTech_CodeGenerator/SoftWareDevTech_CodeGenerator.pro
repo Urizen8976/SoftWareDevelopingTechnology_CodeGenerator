@@ -15,10 +15,16 @@ DEFINES += QT_DEPRECATED_WARNINGS
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += main.cpp \
+    Classes/ClassFactories/CppFactory.cpp \
+    Classes/ClassFactories/CsharpFactory.cpp \
     Classes/ClassFactories/IFactory.cpp \
+    Classes/ClassFactories/JavaFactory.cpp \
     Classes/Unit.cpp
 
 HEADERS += \
+    Classes/ClassFactories/CppFactory.h \
+    Classes/ClassFactories/CsharpFactory.h \
     Classes/ClassFactories/IFactory.h \
+    Classes/ClassFactories/JavaFactory.h \
     Classes/Unit.h
 
