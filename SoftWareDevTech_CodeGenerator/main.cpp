@@ -1,6 +1,7 @@
 #include <QCoreApplication>
 #include <iostream>
 #include <Classes/Unit.h>
+#include <Classes/ClassFactories/IFactory.h>
 
 
 /*Factory * generateFactory(std::string language) {
