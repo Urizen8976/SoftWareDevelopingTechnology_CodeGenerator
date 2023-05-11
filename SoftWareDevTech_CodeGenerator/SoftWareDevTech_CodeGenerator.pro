@@ -29,7 +29,9 @@ SOURCES += main.cpp \
     Classes/MethodUnits/IMethodUnit.cpp \
     Classes/MethodUnits/JavaMethodUnit.cpp \
     Classes/PrintOperatorUnits/CppPrintOperatorUnit.cpp \
-    Classes/PrintOperatorUnits/IPrintOperatorUnit.cpp
+    Classes/PrintOperatorUnits/CsharpPrintOperator.cpp \
+    Classes/PrintOperatorUnits/IPrintOperatorUnit.cpp \
+    Classes/PrintOperatorUnits/JavaPrintOperatorUnit.cpp
 
 HEADERS += \
     Classes/ClassFactories/CppFactory.h \
@@ -46,5 +48,7 @@ HEADERS += \
     Classes/MethodUnits/IMethodUnit.h \
     Classes/MethodUnits/JavaMethodUnit.h \
     Classes/PrintOperatorUnits/CppPrintOperatorUnit.h \
-    Classes/PrintOperatorUnits/IPrintOperatorUnit.h
+    Classes/PrintOperatorUnits/CsharpPrintOperator.h \
+    Classes/PrintOperatorUnits/IPrintOperatorUnit.h \
+    Classes/PrintOperatorUnits/JavaPrintOperatorUnit.h
 

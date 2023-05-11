@@ -5,10 +5,10 @@
 #include <Classes/ClassUnits/IClassUnit.h>
 
 
-class CsClassUnit : public IClassUnit
+class CsharpClassUnit : public IClassUnit
 {
 public:
-    explicit CsClassUnit(const std::string& name);
+    explicit CsharpClassUnit(const std::string& name);
     void add(const UnitPtr& unit, Flags flags) override;
     std::string compile(unsigned int level = 0) const override;
 };

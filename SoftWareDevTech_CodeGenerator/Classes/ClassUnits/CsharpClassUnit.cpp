@@ -1,11 +1,11 @@
 #include "CsharpClassUnit.h"
 
-CsClassUnit::CsClassUnit(const std::string &n) {
+CsharpClassUnit::CsharpClassUnit(const std::string &n) {
     className = n;
     fields.resize(ACCESS_MODIFIERS.size());
 }
 
-void CsClassUnit::add(const UnitPtr &unit, Unit::Flags flags) {
+void CsharpClassUnit::add(const UnitPtr &unit, Unit::Flags flags) {
 
     int accessModifier = PRIVATE;
 
@@ -15,7 +15,7 @@ void CsClassUnit::add(const UnitPtr &unit, Unit::Flags flags) {
     fields[accessModifier].push_back(unit);
 }
 
-std::string CsClassUnit::compile(unsigned int level) const {
+std::string CsharpClassUnit::compile(unsigned int level) const {
     std::string result = generateShift(level) + "class " + className + " {\n";
 
     for(size_t i = 0; i < ACCESS_MODIFIERS.size(); i++) {
