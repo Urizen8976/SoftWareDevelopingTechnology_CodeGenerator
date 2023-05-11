@@ -6,10 +6,10 @@ JavaMethodUnit::JavaMethodUnit(const std::string& n, const std::string& t, Flags
     returnType = t;
     flags = f;
 }
-void JavaMethodUnit::add(const UnitPtr& unit, Flags flags = 0) override {
+void JavaMethodUnit::add(const UnitPtr& unit, Flags flags = 0) {
     body.push_back(unit);
 }
-std::string JavaMethodUnit::compile(unsigned int level = 0) const override {
+std::string JavaMethodUnit::compile(unsigned int level = 0) const {
     std::string result = generateShift(level);
     if (flags & STATIC) {
         result += "static ";
