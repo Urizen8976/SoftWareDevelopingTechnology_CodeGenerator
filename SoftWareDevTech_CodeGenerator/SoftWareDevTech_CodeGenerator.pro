@@ -23,7 +23,11 @@ SOURCES += main.cpp \
     Classes/ClassUnits/CsharpClassUnit.cpp \
     Classes/ClassUnits/IClassUnit.cpp \
     Classes/ClassUnits/JavaClassUnit.cpp \
-    Classes/Unit.cpp
+    Classes/IUnit.cpp \
+    Classes/MethodUnits/CppMethodUnit.cpp \
+    Classes/MethodUnits/CsharpMethodUnit.cpp \
+    Classes/MethodUnits/IMethodUnit.cpp \
+    Classes/MethodUnits/JavaMethodUnit.cpp
 
 HEADERS += \
     Classes/ClassFactories/CppFactory.h \
@@ -34,5 +38,9 @@ HEADERS += \
     Classes/ClassUnits/CsharpClassUnit.h \
     Classes/ClassUnits/IClassUnit.h \
     Classes/ClassUnits/JavaClassUnit.h \
-    Classes/Unit.h
+    Classes/IUnit.h \
+    Classes/MethodUnits/CppMethodUnit.h \
+    Classes/MethodUnits/CsharpmethodUnit.h \
+    Classes/MethodUnits/IMethodUnit.h \
+    Classes/MethodUnits/JavaMethodUnit.h
 

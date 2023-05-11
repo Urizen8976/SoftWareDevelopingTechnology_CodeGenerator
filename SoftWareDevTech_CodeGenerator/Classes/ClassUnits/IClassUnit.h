@@ -2,10 +2,10 @@
 #define ICLASSUNIT_H
 
 
-#include <Classes/Unit.h>
+#include <Classes/IUnit.h>
 
 
-class IClassUnit : public Unit
+class IClassUnit : public IUnit
 {
 public:
     enum AccessModifier {

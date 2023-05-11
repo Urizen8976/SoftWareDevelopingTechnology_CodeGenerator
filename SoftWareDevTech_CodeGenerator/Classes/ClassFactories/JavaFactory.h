@@ -2,7 +2,7 @@
 #define JAVAFACTORY_H
 
 
-#include<Classes/Unit.h>
+#include<Classes/IUnit.h>
 #include<Classes/ClassFactories/IFactory.h>
 // #include<Classes/ClassUnits/JavaClassUnit.h>
 // #include<Classes/MethodUnits/JavaMethodUnit.h>

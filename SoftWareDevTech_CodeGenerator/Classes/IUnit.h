@@ -1,5 +1,5 @@
-#ifndef UNIT_H
-#define UNIT_H
+#ifndef IUNIT_H
+#define IUNIT_H
 
 
 #include <QCoreApplication>
@@ -7,7 +7,7 @@
 #include <memory>
 
 
-class Unit {
+class IUnit {
 public:
     // Модификаторы
     using Flags = unsigned int;
@@ -21,4 +21,4 @@ protected:
     virtual std::string generateShift(unsigned int level) const;  // Генерация отступов
 };
 
-#endif // UNIT_H
+#endif // IUNIT_H
