@@ -7,7 +7,7 @@
 
 class CppPrintOperatorUnit : public IPrintOperatorUnit {
 public:
-    explicit CppPrintOperatorUnit(const std::string& text);
+    explicit CppPrintOperatorUnit(const std::string& text); //  Конструктор, принимающий текст
     std::string compile(unsigned int level = 0) const override;
 };
 

@@ -7,7 +7,7 @@
 
 class JavaPrintOperatorUnit : public IPrintOperatorUnit {
 public:
-    explicit JavaPrintOperatorUnit(const std::string& t);
+    explicit JavaPrintOperatorUnit(const std::string& t); //  Конструктор, принимающий текст
     std::string compile(unsigned int level = 0) const override;
 };
 

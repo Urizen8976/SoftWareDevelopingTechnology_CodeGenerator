@@ -23,13 +23,14 @@ SOURCES += main.cpp \
     Classes/ClassUnits/CsharpClassUnit.cpp \
     Classes/ClassUnits/IClassUnit.cpp \
     Classes/ClassUnits/JavaClassUnit.cpp \
+    Classes/CodeGenerator.cpp \
     Classes/IUnit.cpp \
     Classes/MethodUnits/CppMethodUnit.cpp \
     Classes/MethodUnits/CsharpMethodUnit.cpp \
     Classes/MethodUnits/IMethodUnit.cpp \
     Classes/MethodUnits/JavaMethodUnit.cpp \
     Classes/PrintOperatorUnits/CppPrintOperatorUnit.cpp \
-    Classes/PrintOperatorUnits/CsharpPrintOperator.cpp \
+    Classes/PrintOperatorUnits/CsharpPrintOperatorUnit.cpp \
     Classes/PrintOperatorUnits/IPrintOperatorUnit.cpp \
     Classes/PrintOperatorUnits/JavaPrintOperatorUnit.cpp
 
@@ -42,13 +43,14 @@ HEADERS += \
     Classes/ClassUnits/CsharpClassUnit.h \
     Classes/ClassUnits/IClassUnit.h \
     Classes/ClassUnits/JavaClassUnit.h \
+    Classes/CodeGenerator.h \
     Classes/IUnit.h \
     Classes/MethodUnits/CppMethodUnit.h \
     Classes/MethodUnits/CsharpMethodUnit.h \
     Classes/MethodUnits/IMethodUnit.h \
     Classes/MethodUnits/JavaMethodUnit.h \
     Classes/PrintOperatorUnits/CppPrintOperatorUnit.h \
-    Classes/PrintOperatorUnits/CsharpPrintOperator.h \
+    Classes/PrintOperatorUnits/CsharpPrintOperatorUnit.h \
     Classes/PrintOperatorUnits/IPrintOperatorUnit.h \
     Classes/PrintOperatorUnits/JavaPrintOperatorUnit.h
 

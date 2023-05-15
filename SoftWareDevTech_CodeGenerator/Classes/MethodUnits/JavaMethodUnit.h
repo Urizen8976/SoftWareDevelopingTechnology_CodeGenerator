@@ -7,8 +7,8 @@
 
 class JavaMethodUnit : public IMethodUnit {
 public:
-    JavaMethodUnit(const std::string& n, const std::string& t, Flags f);
-    void add(const UnitPtr& unit, Flags flags = 0) override;
+    JavaMethodUnit(const std::string& name, const std::string& type, Flags flags);
+    void add(const std::shared_ptr<IUnit>& unit, Flags flags = 0) override;
     std::string compile(unsigned int level = 0) const override;
 };
 

@@ -1,14 +1,14 @@
 #include "IFactory.h"
 
 
-UnitPtr Factory::createClass(const std::string &name) const {
+std::shared_ptr<IUnit> IFactory::createClass(const std::string &name) const {
     throw std::runtime_error("Language not supported");
 }
 
-UnitPtr Factory::createMethod(const std::string &name, const std::string &returnType, Unit::Flags flags) const {
+std::shared_ptr<IUnit> IFactory::createMethod(const std::string &name, const std::string &returnType, IUnit::Flags flags) const {
     throw std::runtime_error("Language not supported");
 }
 
-UnitPtr Factory::createPrintOperator(const std::string &text) const {
+std::shared_ptr<IUnit> IFactory::createPrintOperator(const std::string &text) const {
     throw std::runtime_error("Language not supported");
 }

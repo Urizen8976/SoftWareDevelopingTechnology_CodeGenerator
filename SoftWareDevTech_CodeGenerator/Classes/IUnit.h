@@ -4,17 +4,16 @@
 
 #include <QCoreApplication>
 #include <iostream>
-#include <memory>
+#include <memory> //  Для пользования умным указателем
 
 
 class IUnit {
 public:
-    // Модификаторы
-    using Flags = unsigned int;
+    using Flags = unsigned int; //  Теперь слово Flags будет означать unsigned int
 
 public:
-    virtual ~Unit() = default;
-    virtual void add(const UnitPtr&, Flags = 0);  // Добавление вложенных элементов через умные указатели
+    virtual ~IUnit() = default;
+    virtual void add(const std::shared_ptr<IUnit>&, Flags = 0);  // Добавление вложенных элементов через умные указатели
     virtual std::string compile(unsigned int level = 0) const = 0;  // Генерация кода на языке
 
 protected:
