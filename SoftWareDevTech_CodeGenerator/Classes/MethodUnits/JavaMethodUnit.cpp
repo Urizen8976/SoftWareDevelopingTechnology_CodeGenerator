@@ -25,7 +25,7 @@ std::string JavaMethodUnit::compile(unsigned int level) const {
         result += "final ";
     } else if (m_flags & SYNCHRONIZED) { //  При наличии SYNCHRONIZED компилируем synchronized (для потоков в Java)
         result += "synchronized ";
-    } else if (m_flags & VOLATILE) { //  При наличии SYNCHRONIZED компилируем synchronized (для потоков в Java)
+    } else if (m_flags & VOLATILE) { //  При наличии VOLATILE компилируем volatile (для потоков в Java)
         result += "volatile ";
     }
     result += m_returnType + " ";
