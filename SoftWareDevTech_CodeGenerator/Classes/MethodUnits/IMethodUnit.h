@@ -16,14 +16,17 @@ public:
         SYNCHRONIZED = 1 << 5, //  МД для: JAVA
         VOLATILE = 1 << 6      //  МД для: JAVA
     };
-public:
-    virtual void add(const std::shared_ptr<IUnit>&, Flags = 0) = 0;
-    virtual std::string compile(unsigned int level = 0) const = 0;
+
 protected:
     std::string m_methodName; //  Название метода
     std::string m_returnType; //  Тип возвращаемого методом значения
     Flags m_flags;            //  Модификаторы метода
     std::vector<std::shared_ptr<IUnit>> m_body; //  Тело метода - вектор указателей на Unit
+
+public:
+    virtual void add(const std::shared_ptr<IUnit>&, Flags = 0) = 0;
+    virtual std::string compile(unsigned int level = 0) const = 0;
+
 };
 
 

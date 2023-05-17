@@ -9,7 +9,7 @@
 
 class IUnit {
 public:
-    using Flags = unsigned int; //  Теперь слово Flags будет означать unsigned int
+    using Flags = unsigned int; //  Обозначение слова Flags как unsigned int
 
 public:
     virtual ~IUnit() = default;

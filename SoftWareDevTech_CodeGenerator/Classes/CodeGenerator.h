@@ -8,12 +8,18 @@
 #include <Classes/ClassFactories/IFactory.h>
 
 
-const std::vector<std::string> IClassUnit::ACCESS_MODIFIERS =
+enum Language { //  Перечисление поставленных в задаче языков
+    Cpp,
+    Csharp,
+    Java
+};
+
+const std::vector<std::string> IClassUnit::ACCESS_MODIFIERS = // Заполнение константы необходимыми модификаторами доступа
     {"public", "protected", "private", "private protected", "file", "internal", "protected iternal"};
 
-IFactory * generateFactory(std::string language);
+IFactory * generateFactory(Language language);
 
-std::string generateProgram(std::string language);
+std::string generateProgram(Language language);
 
 
 #endif // CODEGENERATOR_H

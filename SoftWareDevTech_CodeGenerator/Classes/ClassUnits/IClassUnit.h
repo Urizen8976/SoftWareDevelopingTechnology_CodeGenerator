@@ -19,14 +19,14 @@ public:
     };
     static const std::vector<std::string> ACCESS_MODIFIERS; //  Модификаторы доступа для языка (определены после класса)
 
-public:
-    virtual void add(const std::shared_ptr<IUnit>&, Flags) = 0;
-    virtual std::string compile(unsigned int level = 0) const = 0;
-
 protected:
     std::string m_className; //  Название для класса
     using Fields = std::vector<std::shared_ptr<IUnit>>; //  Тип данных Fields (вектор указателей на объекты типа IUnit)
     std::vector< Fields > m_fields; //  Вектор векторов указателей на объекты типа IUnit
+
+public:
+    virtual void add(const std::shared_ptr<IUnit>&, Flags) = 0;
+    virtual std::string compile(unsigned int level = 0) const = 0;
 };
 
 

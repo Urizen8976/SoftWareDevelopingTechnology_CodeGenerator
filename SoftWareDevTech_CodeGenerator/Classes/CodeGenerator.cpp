@@ -12,19 +12,18 @@
 #include <Classes/MethodUnits/IMethodUnit.h>
 
 
-IFactory * generateFactory(std::string language) { //  Used by generateProgram function
-    if (language == "Cpp") { //  Определение фабрики какого языка нам нужно использовать
+IFactory * generateFactory(Language language) { //  Used by generateProgram function
+    if (language == Cpp) { //  Определение фабрики какого языка нам нужно использовать
         return new CppFactory();
-    } else if (language == "Csharp") {
+    } else if (language == Csharp) {
         return new CsharpFactory();
-    } else if (language == "Java") {
+    } else if (language == Java) {
         return new JavaFactory();
-    } else {
-        return new IFactory();
-    }
+    } else
+        return nullptr;
 }
 
-std::string generateProgram(std::string language) { //  Функция генерации кода по шаблону из задачи
+std::string generateProgram(Language language) { //  Функция генерации кода по шаблону из задачи
     try { //  В блоке try помещается код, который потенциально может сгенерировать исключение
         IFactory * factory = generateFactory(language); //  Создание фабрики конкретного языка
         std::shared_ptr<IUnit> myClass = factory->createClass("MyClass"); //  Создание класса конкретного языка
@@ -43,9 +42,11 @@ std::string generateProgram(std::string language) { //  Функция гене�
         method->add(printOperator, 0); //  И добавление этого оператора вывода класса конкретного языка
         myClass->add(method, IClassUnit::PROTECTED);
 
-        delete factory; //  Удаление фабрики из-за ненужности после создания объекта        return myClass->compile(); //  Компиляция
+        delete factory; //  Удаление фабрики из-за ненужности после создания объекта
+        return myClass->compile(); //  Компиляция
     }
     catch (const std::runtime_error& error) { //  В случае неподдерживаемого языка, будет вызов ошибки с информацией об исключении.
         std::cerr << error.what();
+        return {}; //  Вызов пустого конструктора, возвращающего пустую строку
     }
 }
